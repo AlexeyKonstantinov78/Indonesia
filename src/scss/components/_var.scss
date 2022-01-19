@@ -1,13 +1,13 @@
 
 
-@mixin font($name, $weight, $weightname) {
+@mixin font($name, $weight) {
     font: {
         family: $name;
         weight: $weight;
         display: swap;
     }   
-    src: local("#{$name}"), url("../fonts/#{$name}-#{$weightname}.woff2") format("woff2"),
-        url("../fonts/#{$name}-#{$weightname}.woff") format("woff");
+    src: local("#{$name}"), url("../fonts/#{$name}-#{$weight}.woff2") format("woff2"),
+        url("../fonts/#{$name}-#{$weight}.woff") format("woff");
     
 }
 

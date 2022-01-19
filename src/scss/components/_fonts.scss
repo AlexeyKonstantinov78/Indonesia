@@ -1,13 +1,24 @@
 
 @font-face {
-    @include font(HelveticaNeueCyr, 300, Light);
+    @include font(merriweather, 400);
 }
+
 @font-face {
-    @include font(HelveticaNeueCyr, 400, Roman);
+    @include font(nunito, 200);
 }
+
 @font-face {
-    @include font(HelveticaNeueCyr, 700, Bold);
+    @include font(nunito, 300);
 }
+
 @font-face {
-    @include font(Comfortaa, 400, Regular);
+    @include font(nunito, 600);
+}
+
+@font-face {
+    @include font(nunito, 700);
+}
+
+@font-face {
+    @include font("open-sans", 700);
 }
