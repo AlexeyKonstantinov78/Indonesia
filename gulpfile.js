@@ -301,7 +301,8 @@ export const server = () => {
 	gulp.watch(path.watch.js, js);
 	gulp.watch(path.watch.svg, svg);
 	gulp.watch(path.watch.img, img);
-	gulp.watch(path.watch.imgF, webp, avif);
+	gulp.watch(path.watch.imgF, webp);
+	gulp.watch(path.watch.imgF, avif);
 };
 
 export const clear = () => del(path.dist.base, {

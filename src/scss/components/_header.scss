@@ -1,0 +1,72 @@
+.header {
+    position: relative;     
+    @include bg-avif-webp("./../img/bg-header-section", jpg);
+    background-position: top;
+
+    &__container {
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            display: block;
+            height: 175px;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 4%, rgba(0, 0, 0, 0) 100%);            
+        }
+        
+
+    }
+    &__content {
+        padding-top: 54px;
+        padding-bottom: 87px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    &__logo {
+        z-index: 1;
+    }
+}
+
+.menu-burger {
+    position: relative;
+
+    &__btn {
+        border: none;
+        background-color: transparent;
+    }
+
+    &__nav {        
+        overflow: hidden;
+        position: absolute;
+        top: -440px; //35px
+        right: 41px; // 41px
+        height: 0;
+        opacity: 0;
+        font-family: Nunito;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        color: #FFFFFF;
+        background-color: $bg;
+        padding: 0;
+        border-radius: 20px 0px;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+        transition: .5s;        
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.activ {
+    top: 35px;
+    height: min-content;
+    opacity: 1;
+    padding: 30px 35px;     
+}

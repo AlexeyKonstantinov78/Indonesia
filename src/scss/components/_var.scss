@@ -1,4 +1,4 @@
-
+$bg:  #FCB500;
 
 @mixin font($name, $weight) {
     font: {
@@ -26,18 +26,21 @@
 
 @mixin bg-avif-webp($url, $type) {
     background: {
-        image: url("#{$url}.#{$type}");        
+        image: url("#{$url}.#{$type}");
+        size: cover;
+        position: center;
+        repeat: no-repeat;        
     };
     background: {
         image: -webkit-image-set(
-            url("#{$url}.avif"),    
-            url("#{$url}.webp"),    
-            url("#{$url}.#{$type}")
+            url("#{$url}.avif") 1x,    
+            url("#{$url}.webp") 1x,    
+            url("#{$url}.#{$type}") 1x
         );
         image: image-set(
-            url("#{$url}.avif"),    
-            url("#{$url}.webp"),    
-            url("#{$url}.#{$type}")
+            url("#{$url}.avif") 1x,    
+            url("#{$url}.webp") 1x,    
+            url("#{$url}.#{$type}") 1x
         );
     };
 }
