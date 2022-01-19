@@ -41,7 +41,7 @@
     &__nav {        
         overflow: hidden;
         position: absolute;
-        top: -440px; //35px
+        top: 35px; //35px
         right: 41px; // 41px
         height: 0;
         opacity: 0;
@@ -54,7 +54,8 @@
         padding: 0;
         border-radius: 20px 0px;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
-        transition: .5s;        
+        transition: .5s;  
+        z-index: 1;      
     }
 
     &__items {
@@ -64,9 +65,50 @@
     }
 }
 
-.activ {
-    top: 35px;
+.activ {    
     height: min-content;
     opacity: 1;
     padding: 30px 35px;     
+}
+
+.present { 
+    position: relative;
+    padding-top: 17px;
+    padding-left: 78px;
+    padding-bottom: 306px;
+
+    &__hgroup { 
+        margin-bottom: 10px;
+    }
+
+    &__h2 {
+        font-family: Merriweather;
+        font-size: 40px;
+        line-height: 130%;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+    }
+    &__name {
+        font-family: Nunito;
+        font-weight: 200;
+        font-size: 200px;
+        line-height: 200px;        
+        text-transform: uppercase;
+        color: #FFFFFF;        
+    }
+
+    &__subscription {
+        font-family: Nunito;        
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 150%;
+        color: #FFFFFF;
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 369px;
+        right: 10px;
+    }
 }

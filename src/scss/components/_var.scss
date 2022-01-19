@@ -1,4 +1,8 @@
 $bg:  #FCB500;
+$bg-hover-focus: #F3C858;
+$bg-focus-border: #C2900F;
+$bg-active:  #D09600;
+$bg-disabled: #AFAFAF;
 
 @mixin font($name, $weight) {
     font: {
