@@ -71,11 +71,21 @@ h2.section__name {
     line-height: 150%;
     letter-spacing: 0.02em;
     color: #303030;
-    max-width: 580px;    
+    max-width: 580px;
+    @media (max-width: 1200px) {
+        font-size: 30px;
+    }
+    @media (max-width: 1000px) {
+        max-width: 380px;
+        font-size: 20px;
+    }
 }
 
 .subscription-add {        
-    color: #303030;    
+    color: #303030; 
+    @media (max-width: 1000px) {        
+        font-size: 14px;
+    }  
 }
 
 .container {
