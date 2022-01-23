@@ -11,13 +11,14 @@ html {
     
 }
 
-.body {
+body {
     min-width: 320px;
     min-height: 100vh;
     font-family: nunito, sans-serif;
     font-size: 18px;
     line-height: 1.5;
     font-weight: 300;
+    background-color: #fff;
 }
 
 h1,
@@ -53,6 +54,28 @@ img {
 button {
     font: inherit;
     cursor: pointer;
+}
+
+h2.section__name {
+    font-family: Nunito;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: #303030;
+}
+
+.subscription {
+    font-family: Merriweather;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #303030;
+    max-width: 580px;    
+}
+
+.subscription-add {        
+    color: #303030;    
 }
 
 .container {
