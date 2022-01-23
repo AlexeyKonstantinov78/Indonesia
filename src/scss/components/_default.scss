@@ -62,6 +62,9 @@ h2.section__name {
     font-size: 18px;
     line-height: 150%;
     color: #303030;
+    @media (max-width: 767px) {
+        font-size: 12px;
+    }
 }
 
 .subscription {
@@ -78,6 +81,9 @@ h2.section__name {
     @media (max-width: 1000px) {
         max-width: 380px;
         font-size: 20px;
+    }
+    @media (max-width: 767px) {
+        font-size: 12px;
     }
 }
 
