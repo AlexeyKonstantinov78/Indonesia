@@ -1,0 +1,84 @@
+.tour {
+    @include bg-avif-webp("./../img/bg-tour", png);
+    min-height: 500px;
+    padding-bottom: 0;
+    &__container {
+        
+    }
+
+    &__name {
+        color: #fff;
+        margin-bottom: 60px;
+    }
+
+    &__subscription {
+        color: #fff;
+        margin-bottom: 80px;
+    }
+
+    &__subscription-add {
+        color: #fff;
+        margin-bottom: 80px;
+        max-width: 480px;
+    }
+
+    &__fieldset {
+        border: none;
+        padding: 68px 60px;
+        background: rgba(230, 205, 173, 0.3);
+        backdrop-filter: blur(10px);
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    &__calc {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 23px 38px 21px;
+        height: 130px;
+        background: rgba(33, 25, 25, 0.78);
+        border-radius: 20px;
+        border: none;
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-weight: bold;
+        color: #fff;
+        max-width: 217px;        
+        height: 87px;
+    }    
+
+    &__input {
+        background-color: transparent;
+        max-width: 140px;        
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 130%;
+        color: #FFFFFF;
+        opacity: 0.7;
+        width: 100%;
+        display: inline-block;
+        border: none;
+        overflow: unset;
+    }
+
+    &__span {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 130%;
+        color: #FFFFFF;
+        opacity: 0.7;
+        max-width: 152px;
+    }
+
+    &__btn {
+        padding: 0;
+        width: 219px;
+        height: 67px;
+        
+    }
+
+}
