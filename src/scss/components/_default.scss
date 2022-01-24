@@ -76,6 +76,7 @@ h2.section__name {
     color: #303030;
     max-width: 580px;
     @media (max-width: 1200px) {
+        max-width: 540px;
         font-size: 30px;
     }
     @media (max-width: 1000px) {

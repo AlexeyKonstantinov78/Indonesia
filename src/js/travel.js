@@ -9,7 +9,10 @@ characteristicsItemElems.forEach(elem => {
 
 const open = (button, dropDown) => {
   closeAllDrops(button, dropDown);
+  console.dir(dropDown);
+  console.log(dropDown.scrollHeight);
   dropDown.style.height = dropDown.scrollHeight + 'px';
+//   dropDown.style.height = 'min-content';
   button.classList.add('active');
   dropDown.classList.add('active');
 };
