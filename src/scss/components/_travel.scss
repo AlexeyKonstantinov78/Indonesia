@@ -1,0 +1,70 @@
+.travel {
+    padding-top: 5px;
+
+    &__name {
+        margin-bottom: 60px;
+    }
+    &__subscription {
+        margin-bottom: 80px;
+    }
+
+    &__content-flex {
+        display: flex;
+        justify-content: space-between;
+    }   
+
+    &__list {
+        max-width: 566px;
+        border-left: 2px solid $bg;
+        margin-left: 14px;
+    }
+
+    &__title {
+        position: relative;
+        font-weight: bold;
+        font-size: 20px;
+        color: #303030;
+        width: 100%;
+        text-align: left;
+        padding-left: 100px;        
+        border: none;
+        background-color: transparent;
+
+        &:before {
+            position: absolute;
+            top: 7px;
+            left: -10px;
+            content: "";
+            display: block;
+            width: 18px;
+            height: 18px;
+            background-color: $bg;
+            border-radius: 50%;            
+        }
+        &.active:before {
+            width: 30px;
+            height: 30px;
+            left: -15px;
+            top: 0;
+        }
+
+    }
+
+    &__description {
+        color: #303030;
+        margin-left: 100px;        
+        margin-bottom: 38px;        
+        height: 0;
+        overflow: hidden;
+        transition: height .4s ease-in-out;
+        &.active { 
+            padding-top: 17px;           
+            margin-bottom: 64px;
+        }
+    }
+
+    &__map {
+        max-width: 480px;
+    }
+
+}
