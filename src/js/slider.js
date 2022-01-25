@@ -56,3 +56,32 @@ window.addEventListener('resize', () => {
     }
     
 });
+
+const swiper = new Swiper('.swiper2', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    loop: true,
+    breakpoints: {
+        1440: {
+            slidesPerView: 1,
+            centeredSlides: true,                
+            centeredSlidesBounds: true,
+        },
+        1024: {
+            slidesPerView: 1,
+            centeredSlides: true,                
+            centeredSlidesBounds: true,
+        },
+        
+        768: {
+            slidesPerView: 1,
+            centeredSlides: true,                
+            centeredSlidesBounds: true,
+        },
+        320: {
+            slidesPerView: 1,
+            centeredSlides: true,                
+            centeredSlidesBounds: true,
+        },
+    }
+});

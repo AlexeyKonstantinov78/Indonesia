@@ -1,0 +1,35 @@
+.foto-album {
+
+    &__name {
+        margin-bottom: 60px;
+        @media (max-width: 1000px) {
+            margin-bottom: 30px;
+        }
+        @media (max-width: 680px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__subscription {
+        margin-bottom: 80px;
+        @media (max-width: 1200px) {
+            margin-bottom: 60px;
+        }
+        @media (max-width: 1000px) {
+            margin-bottom: 40px;
+        }
+        @media (max-width: 680px) {
+            margin-bottom: 25px;
+        }
+    }
+    &__img {
+        height: 100%;  
+    }
+
+}
+
+.swiper2 {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
