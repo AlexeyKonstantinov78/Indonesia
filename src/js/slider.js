@@ -61,6 +61,10 @@ const swiper = new Swiper('.swiper2', {
     direction: 'horizontal',
     slidesPerView: 1,
     loop: true,
+    navigation: {
+        nextEl: '.swiper2-button-next',
+        prevEl: '.swiper2-button-prev',
+    },
     breakpoints: {
         1440: {
             slidesPerView: 1,
