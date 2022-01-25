@@ -7,6 +7,20 @@
     padding: 25px 112px;
     border-radius: 12px;
     border: 2px solid transparent;
+    transition-property:  background-color, border;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.34s;    
+    &:hover {
+        background-color: $bg-hover-focus;
+    }
+    &:focus {
+        background-color: $bg-hover-focus;
+        border: 2px solid $bg-focus-border;        
+    }
+    &:active {
+        background-color: $bg-active;
+        border: 2px solid $bg-focus-border;      
+    }
     @media (max-width: 1200px) {
         padding: 18px 81px;
         border-radius: 10px;
