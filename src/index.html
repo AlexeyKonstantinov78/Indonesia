@@ -181,18 +181,27 @@
                 <p class="subscription-add tour__subscription-add">Выбери удобные даты, укажи количество людей, и выбери дополнительные опции.</p>
                 <fieldset class="tour__fieldset">
                     <fieldset class="tour__calc">
-                        <label class="tour__label">Дата 
+                        <div class="tour__item">
+                            <div class="tour__daw"></div>
+                            <label for="data" class="tour__label">Дата</label>
                             <input class="tour__input tour__input-data" type="text" name="data" id="data">
                             <span class="tour__span">Выбирите дату путешествия</span>
-                        </label>
-                        <label class="tour__label">Люди
-                            <input class="tour__input tour__input-count" type="text" name="count" id="count" >
+                        </div>
+                        
+                        <div class="tour__item">
+                            <div class="tour__daw"></div>
+                            <label for="count" class="tour__label">Люди</label>
+                            <input class="tour__input tour__input-count" type="text" name="count" id="count" >                            
                             <span class="tour__span">Укажите количество человек</span>
-                        </label>
-                        <label class="tour__label">Опции
+                        </div>
+                        
+                        <div class="tour__item">
+                            <div class="tour__daw"></div>
+                            <label for="option" class="tour__label">Опции</label>
                             <input class="tour__input tour__input-option" type="text" name="option" id="option" >
                             <span class="tour__span">Выбирите нужные опции</span>
-                        </label>
+                        </div>
+                        
                         <button class="tour__btn btn">Узнать цену</button>
                     </fieldset>
                 </fieldset>
