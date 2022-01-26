@@ -329,10 +329,56 @@
         <section class="booking" id="booking">
             <div class="container booking__container">
                 <form class="booking__form" action="https://jsonplaceholder.typicode.com/posts" method="post" target="_blank" id="bron">
-                    <fieldset class="booking__fieldset">
+                    <fieldset class="booking__fieldset booking__fieldset_container">
                         <h2 class="booking__name">Бронирование тура</h2>
-                        
 
+                        <fieldset class="tour__calc booking__fieldset_options">
+                            <fieldset class="tour__item booking__item">
+                                <div class="tour__daw booking__daw"></div>
+                                <label for="data" class="tour__label booking__label">Дата</label>
+                                <input class="tour__input tour__input-data booking__input" type="text" name="data" id="dataform">
+                                <span class="tour__span booking__span">Выбирите дату путешествия</span>
+                            </fieldset>
+                            
+                            <fieldset class="tour__item booking__item">
+                                <div class="tour__daw booking__daw"></div>
+                                <label for="count" class="tour__label booking__label">Люди</label>
+                                <input class="tour__input tour__input-count booking__input" type="text" name="count" id="countform" >                            
+                                <span class="tour__span booking__span">Укажите количество человек</span>
+                            </fieldset>
+                            
+                            <fieldset class="tour__item booking__item">
+                                <div class="tour__daw booking__daw"></div>
+                                <label for="option" class="tour__label booking__label">Опции</label>
+                                <input class="tour__input tour__input-option booking__input" type="text" name="option" id="optionform" >
+                                <span class="tour__span booking__span">Выбирите нужные опции</span>
+                            </fieldset>
+                        </fieldset>
+                        <fieldset class="booking__item booking__item_fio">
+                            <label class="tour__label booking__label booking__label_fio" for="fio">ФИО
+                                <input class="booking__input booking__input_fio" type="text" name="fio" id="fio" placeholder="Введите ваше имя" required>
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="booking__fieldset booking__fieldset_contacts">
+                            <fieldset class="booking__item booking__item_contacts booking__item_email">
+                                <label class="tour__label booking__label booking__label_contacts">Email
+                                    <input class="booking__input booking__input_email" type="email" name="email" id="email" placeholder="Введите адресс электронной почты" required>                                
+                                </label>
+                            </fieldset>
+                            <fieldset class="booking__item booking__item_contacts booking__item_tel">
+                                <label class="tour__label booking__label booking__label_contacts">Телефон
+                                    <input class="booking__input booking__input_tel" type="tel" name="tel" id="tel" placeholder="Введите номер телефона" required>                            
+                                </label>
+                            </fieldset>
+                        </fieldset>
+
+                        <div class="booking__result">
+                            <p class="booking__result-text">24 ноября - 7 декабря, 4 человека</p>
+                            <p class="booking__result-sum">459 590₽</p>
+                        </div>                        
+
+                        <button class="booking__btn btn">Забронировать</button>
                     </fieldset>
                 </form>
                 

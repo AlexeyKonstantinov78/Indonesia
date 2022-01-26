@@ -3,6 +3,7 @@ $bg-hover-focus: #F3C858;
 $bg-focus-border: #C2900F;
 $bg-active:  #D09600;
 $bg-disabled: #AFAFAF;
+$font-color: #303030;
 
 @mixin font($name, $weight) {
     font: {

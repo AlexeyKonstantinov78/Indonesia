@@ -62,7 +62,7 @@ button {
     font-weight: 700;
     font-size: 18px;
     line-height: 150%;
-    color: #303030;
+    color: $font-color;
     @media (max-width: 767px) {
         font-size: 12px;
     }
@@ -74,7 +74,7 @@ button {
     font-size: 34px;
     line-height: 150%;
     letter-spacing: 0.02em;
-    color: #303030;
+    color: $font-color;
     max-width: 580px;
     @media (max-width: 1200px) {
         max-width: 540px;
@@ -90,7 +90,7 @@ button {
 }
 
 .subscription-add {        
-    color: #303030; 
+    color: $font-color; 
     @media (max-width: 1000px) {        
         font-size: 14px;
     }  

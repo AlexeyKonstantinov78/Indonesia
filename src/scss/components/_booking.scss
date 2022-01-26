@@ -1,0 +1,211 @@
+.booking {
+    
+
+    &__fieldset {        
+        border: 1px solid $bg-disabled;
+        border-radius: 30px;        
+
+        &_container {
+            margin: 0 auto;
+            max-width: 980px;
+            padding: 60px 100px;
+            position: relative;
+            @media (max-width: 1000px) {
+                padding: 40px 60px;
+            }
+            @media (max-width: 680px) {
+                padding: 20px 10px 25px;
+            }
+        }
+        &_options {
+            margin-bottom: 30px;
+            background-color: transparent;
+            padding: 0;
+            @media (max-width: 1000px) {
+                flex-direction: row;
+                min-height: max-content;
+            }
+            @media (max-width: 750px) {
+                flex-direction: column;
+                min-height: unset;
+                height: min-content;
+                gap: 15px;
+            }
+            @media (max-width: 680px) {
+                margin-bottom: 15px;
+            }
+        }
+        
+        &_contacts {
+            margin-bottom: 30px;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: 1000px) {
+                margin-bottom: 24px;
+            }
+            @media (max-width: 680px) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__name {
+        font-family: Merriweather;
+        font-weight: normal;
+        font-size: 34px;
+        line-height: 150%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: $font-color;
+        margin-bottom: 60px;
+        @margin (max-width: 1200px) {
+            font-size: 30px;
+        }
+        @margin (max-width: 1000px) {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        @media (max-width: 680px) {
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__item {
+        border: 1px solid $bg-disabled;
+        border-radius: 12px;
+        padding: 12px 15px;
+        height:min-content;
+
+        &_fio {
+            margin-bottom: 30px;
+            padding: 0;
+            @media (max-width: 680px) {
+                margin-bottom: 15px;
+            }
+        }
+
+        &_contacts {
+            width: 360px;
+            padding: 0;
+            @media (max-width: 1000px) {
+                width: 280px;
+            }
+            @media (max-width: 680px) {
+                width: 100%;
+            }
+        }
+        &_email {
+            @media (max-width: 680px) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    
+    
+    &__daw {
+        &:before {
+            border-bottom: 2px solid $font-color;
+            border-right: 2px solid $font-color; 
+        }
+    }
+    &__label {
+        color: $font-color;
+
+        &_fio {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 0;
+            border: 1px solid transparent;
+            border-radius: 12px;
+            &:hover {
+                border: 1px solid $bg;
+            }
+
+            &:active {
+                border: 1px solid $bg;
+            }
+
+            &:focus {
+                border: 1px solid $bg-focus-border;
+            }
+        }
+        &_contacts {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 0;   
+            border: 1px solid transparent;
+            border-radius: 12px;
+            &:hover {
+                border: 1px solid $bg;
+            }
+
+            &:active {
+                border: 1px solid $bg;
+            }
+
+            &:focus {
+                border: 1px solid $bg-focus-border;
+            }         
+        }
+        
+    }
+
+    &__input {
+        color: $font-color;
+        width: 100%;  
+        padding-top: 12px;
+        margin-bottom: 21px;
+        border: none;
+        
+    }
+
+    &__span {
+        color: $font-color; 
+        
+    }
+
+    &__result {
+        display: inline-block;
+        max-width: 360px;
+        margin-bottom: 9px;
+        &-text {
+            margin-bottom: 10px;
+            @media (max-width: 1000px) {
+                font-size: 14px;
+                margin-bottom: 18px;
+            }
+        }
+
+        &-sum {
+            font-weight: bold;
+            font-size: 20px;
+            @media (max-width: 1000px) {
+                font-size: 18px;
+            }
+        }
+        @media (max-width: 1000px) {
+            margin-bottom: 0;
+        }
+        @media (max-width: 680px) {
+            max-width: unset;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: 60px;
+        right: 100px;
+        @media (max-width: 1000px) {
+            right: 60px;
+        }
+        @media (max-width: 680px) {
+            position: static; 
+            display: flex;
+            margin: auto;           
+        }
+    }
+}
