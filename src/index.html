@@ -59,13 +59,13 @@
                         </button>                
                         <nav class="navigation menu-burger__nav">
                             <ul class="menu-burger__items">
-                                <li class="menu-burger__item"><a href="#" class="menu-burger__link">Индонезия</a></li>
-                                <li class="menu-burger__item"><a href="#" class="menu-burger__link">Путешествие</a></li>
-                                <li class="menu-burger__item"><a href="#" class="menu-burger__link">Тур 14 дней</a></li>
-                                <li class="menu-burger__item"><a href="#" class="menu-burger__link">Почему мы?</a></li>
-                                <li class="menu-burger__item"><a href="#" class="menu-burger__link">Фотоальбом</a></li>
-                                <li class="menu-burger__item"><a href="#" class="menu-burger__link">Бронирование</a></li>
-                                <li class="menu-burger__item"><a href="#" class="menu-burger__link">Контакты</a></li>                               
+                                <li class="menu-burger__item"><a href="#about" class="menu-burger__link">Индонезия</a></li>
+                                <li class="menu-burger__item"><a href="#travel" class="menu-burger__link">Путешествие</a></li>
+                                <li class="menu-burger__item"><a href="#tour" class="menu-burger__link">Тур 14 дней</a></li>
+                                <li class="menu-burger__item"><a href="#why" class="menu-burger__link">Почему мы?</a></li>
+                                <li class="menu-burger__item"><a href="#album" class="menu-burger__link">Фотоальбом</a></li>
+                                <li class="menu-burger__item"><a href="#booking" class="menu-burger__link">Бронирование</a></li>
+                                <li class="menu-burger__item"><a href="#contacts" class="menu-burger__link">Контакты</a></li>                               
                             </ul>                    
                         </nav>
                     </div>
@@ -77,12 +77,12 @@
                         <h1 class="present__name">indonesia</h1>
                     </hgroup>
                     <p class="present__subscription">Тур 14 дней, покажем все самое интересное. <br/>Вы точно запомните этот отдых навсегда.</p>
-                    <button class="present__btn btn" onclick="window.location.href='#bron'" aria-label="переход к разделу бронирования">Забронировать</button>                    
+                    <button class="present__btn btn" onclick="window.location.href='#booking'" aria-label="переход к разделу бронирования">Забронировать</button>                    
                 </section>
             </div>                      
         </header> 
 
-        <section class="about">
+        <section class="about" id="about">
             <div class="container about__container">
                 <h2 class="section__name about__title">Индонезия</h2>
                 <h3 class="subscription about__subscription">Незабываемая, чистая красота островов восхищает своей нетронутой природой и&nbsp;культурными традициями.</h3>
@@ -111,7 +111,7 @@
             </div>
         </section>  
         
-        <section class="travel">
+        <section class="travel" id="travel">
             <div class="container travel__container">
                 <h2 class="section__name travel__name">Путешествие</h2>
                 <h3 class="subscription travel__subscription">Посети это удивительное место, а мы покажем самые фантастические места.</h3>
@@ -174,7 +174,7 @@
 
             </div>
         </section>
-        <section class="tour">
+        <section class="tour" id="tour">
             <div class="container tour__container">
                 <h2 class="section__name tour__name">Тур 14 дней</h2>
                 <h3 class="subscription tour__subscription">Думаем, показать тебе Индонезию лучше, чем рассказывать о ней.</h3>
@@ -207,7 +207,7 @@
                 </fieldset>
             </div>
         </section>
-        <section class="why">
+        <section class="why" id="why">
             <div class="container why__container">
                 <h2 class="section__name why__name">Почему мы?</h2>
                 <h3 class="subscription why__subscription">Мы знаем, как сделать ваше путешествие незабываемым.</h3>
@@ -269,7 +269,8 @@
                 </ul>
             </div>
         </section>
-        <section class="foto-album">
+
+        <section class="foto-album" id="album">
             <div class="container foto-album__container">
                 <h2 class="section__name foto-album__name">Фотоальбом</h2>
                 <h3 class="subscription foto-album__subscription">За годы поездок у нас накопилось много фотографий из Индонезии. Представляем их вам.</h3>
@@ -322,6 +323,19 @@
                     </ul>
                     
                 </div>
+            </div>
+        </section>
+
+        <section class="booking" id="booking">
+            <div class="container booking__container">
+                <form class="booking__form" action="https://jsonplaceholder.typicode.com/posts" method="post" target="_blank" id="bron">
+                    <fieldset class="booking__fieldset">
+                        <h2 class="booking__name">Бронирование тура</h2>
+
+
+                    </fieldset>
+                </form>
+                
             </div>
         </section>
     </main>
