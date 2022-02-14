@@ -1,5 +1,4 @@
-.booking {
-    
+.booking {    
 
     &__fieldset {        
         border: 1px solid $bg-disabled;
@@ -34,6 +33,7 @@
             @media (max-width: 680px) {
                 margin-bottom: 15px;
             }
+
         }
         
         &_contacts {
@@ -48,6 +48,11 @@
                 flex-direction: column;
             }
         }
+        
+    }
+
+    &__options-fieldset {
+        right: 0;
     }
 
     &__name {
@@ -163,7 +168,8 @@
 
     &__span {
         color: $font-color; 
-        
+        height: 42px;
+        overflow: hidden;        
     }
 
     &__result {

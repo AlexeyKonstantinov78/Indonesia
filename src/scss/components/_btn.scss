@@ -21,6 +21,10 @@
         background-color: $bg-active;
         border: 2px solid $bg-focus-border;      
     }
+    &:disabled {
+        background-color: $bg-disabled;
+        border: 2px solid $bg-disabled;
+    }
     @media (max-width: 1200px) {
         padding: 18px 81px;
         border-radius: 10px;

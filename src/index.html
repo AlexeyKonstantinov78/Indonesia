@@ -183,21 +183,21 @@
                     <fieldset class="tour__calc">
                         <div class="tour__item calc__date">
                             <div class="tour__daw"></div>
-                            <label for="data" class="tour__label">Дата</label>
+                            <label class="tour__label">Дата</label>
                             
                             <span class="tour__span">Выбирите дату путешествия</span>
                         </div>
                         
                         <div class="tour__item calc__count">
                             <div class="tour__daw calc__count-daw"></div>
-                            <label for="count" class="tour__label">Люди</label>                            
+                            <label class="tour__label">Люди</label>                            
                             
                             <span class="tour__span">Укажите количество человек</span>                             
                         </div>
                         
                         <div class="tour__item calc__options">
                             <div class="tour__daw"></div>
-                            <label for="option" class="tour__label">Опции</label>
+                            <label class="tour__label">Опции</label>
                             
                             <span class="tour__span tour__span_overflow">Выбирите нужные опции</span>
                         </div>
@@ -412,25 +412,102 @@
                         <h2 class="booking__name">Бронирование тура</h2>
 
                         <fieldset class="tour__calc booking__fieldset_options">
-                            <fieldset class="tour__item booking__item">
+                            <fieldset class="tour__item booking__item booking__date">
                                 <div class="tour__daw booking__daw"></div>
-                                <label for="data" class="tour__label booking__label">Дата</label>
+                                <label for="dataform" class="tour__label booking__label">Дата</label>
                                 <input class="tour__input tour__input-data booking__input" type="text" name="data" id="dataform">
                                 <span class="tour__span booking__span">Выбирите дату путешествия</span>
+                                <fieldset class="calc__date-fieldset booking__date-fieldset">
+                                    <h2 class="calc__date-name">Свободные даты</h2>
+                                    <div class="calc__date-content">
+                                        <ul class="calc__date-month-year calc__date-items">
+                                            <li class="calc__date-item">Ноябрь 2021</li>
+                                            <li class="calc__date-item">Декабрь 2021</li>
+                                            <li class="calc__date-item">Январь 2022</li>
+                                            <li class="calc__date-item calc__date-item_active">Февраль 2022</li>
+                                            <li class="calc__date-item">Март 2022</li>
+                                            <li class="calc__date-item">Апрель 2022</li>
+                                            <li class="calc__date-item">Май 2022</li>
+                                        </ul>
+                                        <div class="calc__date-limiter"></div>
+                                        <fieldset class="calc__date-day">
+                                            <label class="calc__date-label">
+                                                <input class="calc__date-input radio-input" type="radio" name="date" value="4.02 - 18.02">
+                                                <span>4.02 - 18.02</span>
+                                            </label>
+                                            <label class="calc__date-label">
+                                                <input class="calc__date-input radio-input" type="radio" name="date" value="7.02 - 21.02">
+                                                <span>7.02 - 21.02</span>
+                                            </label>
+                                            <label class="calc__date-label">
+                                                <input class="calc__date-input radio-input" type="radio" name="date" value="12.02 - 26.02">
+                                                <span>12.02 - 26.02</span>
+                                            </label>
+                                            <label class="calc__date-label">
+                                                <input class="calc__date-input radio-input" type="radio" name="date" value="20.02 - 6.03">
+                                                <span>20.02 - 6.03</span>
+                                            </label>
+                                        </fieldset>
+                                    </div>                    
+                
+                                    <button class="calc__date-btn btn">Готово</button>
+                                </fieldset>
                             </fieldset>
                             
-                            <fieldset class="tour__item booking__item">
+                            <fieldset class="tour__item booking__item booking__count">
                                 <div class="tour__daw booking__daw"></div>
-                                <label for="count" class="tour__label booking__label">Люди</label>
+                                <label for="countform" class="tour__label booking__label">Люди</label>
                                 <input class="tour__input tour__input-count booking__input" type="text" name="count" id="countform" >                            
                                 <span class="tour__span booking__span">Укажите количество человек</span>
+                                <fieldset class="calc__count-fieldset booking__count-fieldset">
+                                    <label class="calc__count-label">
+                                        <input class="calc__count-input radio-input" type="radio" name="count" value="1">1
+                                    </label>                                
+                                    <label class="calc__count-label">
+                                        <input class="calc__count-input radio-input" type="radio" name="count" value="2">2
+                                    </label>
+                                    <label class="calc__count-label">
+                                        <input class="calc__count-input radio-input" type="radio" name="count" value="3">3
+                                    </label>
+                                    <label class="calc__count-label">
+                                        <input class="calc__count-input radio-input" type="radio" name="count" value="4">4
+                                    </label>
+                                    <label class="calc__count-label">
+                                        <input class="calc__count-input radio-input" type="radio" name="count" value="5">5
+                                    </label>
+                                    <label class="calc__count-label">
+                                        <input class="calc__count-input radio-input" type="radio" name="count" value="6">6
+                                    </label>
+                                </fieldset>
                             </fieldset>
                             
-                            <fieldset class="tour__item booking__item">
+                            <fieldset class="tour__item booking__item booking__options">
                                 <div class="tour__daw booking__daw"></div>
-                                <label for="option" class="tour__label booking__label">Опции</label>
+                                <label for="optionform" class="tour__label booking__label">Опции</label>
                                 <input class="tour__input tour__input-option booking__input" type="text" name="option" id="optionform" >
                                 <span class="tour__span booking__span">Выбирите нужные опции</span>
+                                <fieldset class="calc__options-fieldset booking__options-fieldset">
+                                    <h2 class="calc__options-name">Опции</h2>
+                                    <fieldset class="calc__options-content">
+                                        <label class="calc__options-label">
+                                            <input class="calc__options-input" type="checkbox" name="options" value="Няня">
+                                            <span>Няня</span>
+                                        </label>
+                                        <label class="calc__options-label">
+                                            <input class="calc__options-input" type="checkbox" name="options" value="Персональное меню">
+                                            <span>Персональное меню</span>
+                                        </label>
+                                        <label class="calc__options-label">
+                                            <input class="calc__options-input" type="checkbox" name="options" value="Персональный гид">
+                                            <span>Персональный гид</span>
+                                        </label>
+                                        <label class="calc__options-label">
+                                            <input class="calc__options-input" type="checkbox" name="options" value="Улучшенная палатка">
+                                            <span>Улучшенная палатка</span>
+                                        </label>
+                                    </fieldset>
+                                    <button class="calc__options-btn btn">Готово</button>
+                                </fieldset>
                             </fieldset>
                         </fieldset>
                         <fieldset class="booking__item booking__item_fio">
@@ -453,11 +530,11 @@
                         </fieldset>
 
                         <div class="booking__result">
-                            <p class="booking__result-text">24 ноября - 7 декабря, 4 человека</p>
-                            <p class="booking__result-sum">459 590₽</p>
+                            <p class="booking__result-text">Выбирите дату путешествия</p>
+                            <p class="booking__result-sum">Итог </p>
                         </div>                        
 
-                        <button class="booking__btn btn" type="submit">Забронировать</button>
+                        <button class="booking__btn btn" type="submit" disabled="disabled">Забронировать</button>
                     </fieldset>
                 </form>
                 
