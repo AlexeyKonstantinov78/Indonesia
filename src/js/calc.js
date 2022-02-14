@@ -61,6 +61,19 @@ const  calculator = () => {
     instBtn(summary);
 };
 
+const message = (tagBlog) => {
+
+    let div = document.createElement('div');
+        div.className = 'message__error';
+        div.style.cssText = "position: absolute; bottom: 0; left: calc(50% - (242px / 2)); border-radius: 8px; color: black; background-color: #fff; border: 1px solid red; padding: 10px 20px";
+        div.innerHTML = 'Выберите все значения';
+        tagBlog.append(div);
+
+    setTimeout(() =>{        
+        tagBlog.querySelector('.message__error').remove();
+    }, 3000);
+};
+
 // открываем и закрываем daw 
 tourCalc.addEventListener('click', (event) => {
     let target = event.target;
@@ -79,10 +92,11 @@ tourCalc.addEventListener('click', (event) => {
 
 
     if (target.classList.contains('tour__btn')) {
-        if (count !== 0 &&  date !== '' && options.length >0) {
+        if (count !== 0 &&  date !== '') {
             calculator();
         } else {
-            console.log('выберите все значения');
+            // console.log('выберите все значения');
+            message(tourCalc);
         }
     }
 
@@ -105,10 +119,11 @@ calcDateFieldset.addEventListener('click', (event) => {
     if (target.classList.contains('calc__date-btn')) {
         
         calcDateFieldset.querySelectorAll('.radio-input').forEach(item => {
-            
+
             if (item.checked) {
                 toggle('calc__date-fieldset');                
                 calcSpan(item.value, 'calc__date');
+                
             }
         });
         
@@ -128,7 +143,12 @@ calcOptionsFieldset.addEventListener('click', (event) => {
             }
         }) ;
 
+        
         if (options.length > 0) {
+            toggle('calc__options-fieldset');
+            calcSpan(options, 'calc__options');
+        } else {
+            options.push('Выбирите нужные опции');
             toggle('calc__options-fieldset');
             calcSpan(options, 'calc__options');
         }

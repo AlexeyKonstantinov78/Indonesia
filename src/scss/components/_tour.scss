@@ -2,7 +2,7 @@
     @include bg-avif-webp("./../img/bg-tour", png);
     min-height: 500px;
     padding-bottom: 0;
-    position: relative;
+    position: relative;    
 
     &__container {
         @media (max-width: 1000px) {
@@ -10,6 +10,8 @@
         }        
     }
     
+    
+
     &__name {
         color: #fff;
         margin-bottom: 60px;
@@ -220,7 +222,7 @@
         max-width: 152px;
         &_overflow {
             height: 42px;
-            overflow: auto;
+            overflow: hidden;
         }
         @media (max-width: 1000px) { 
             font-size: 14px;            
