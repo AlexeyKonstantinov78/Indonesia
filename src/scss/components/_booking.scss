@@ -82,6 +82,18 @@
         border-radius: 12px;
         padding: 12px 15px;
         height:min-content;
+        transition: border .34s;
+        &:hover {
+            border: 1px solid $bg;
+        }
+
+        &:active {
+            border: 1px solid $bg;
+        }
+
+        &:focus {
+            border: 1px solid $bg-focus-border;
+        }
 
         &_fio {
             margin-bottom: 30px;
@@ -117,42 +129,20 @@
     }
     &__label {
         color: $font-color;
-
+        
         &_fio {
             width: 100%;
             padding: 12px 15px;
             margin-bottom: 0;
             border: 1px solid transparent;
-            border-radius: 12px;
-            &:hover {
-                border: 1px solid $bg;
-            }
-
-            &:active {
-                border: 1px solid $bg;
-            }
-
-            &:focus {
-                border: 1px solid $bg-focus-border;
-            }
+            border-radius: 12px;            
         }
         &_contacts {
             width: 100%;
             padding: 12px 15px;
             margin-bottom: 0;   
             border: 1px solid transparent;
-            border-radius: 12px;
-            &:hover {
-                border: 1px solid $bg;
-            }
-
-            &:active {
-                border: 1px solid $bg;
-            }
-
-            &:focus {
-                border: 1px solid $bg-focus-border;
-            }         
+            border-radius: 12px;                 
         }
         
     }
