@@ -64,10 +64,10 @@
         letter-spacing: 0.02em;
         color: $font-color;
         margin-bottom: 60px;
-        @margin (max-width: 1200px) {
+        @media (max-width: 1200px) {
             font-size: 30px;
         }
-        @margin (max-width: 1000px) {
+        @media (max-width: 1000px) {
             font-size: 20px;
             margin-bottom: 40px;
         }

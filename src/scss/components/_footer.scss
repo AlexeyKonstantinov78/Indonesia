@@ -71,6 +71,10 @@
     &__link {
         display: block;
         width: 100%;
+        transition: color .34s;
+        &:hover {
+            color: $bg;
+        }
         @media (max-width: 680px) {
             font-size: 12px;
         }        
@@ -92,6 +96,7 @@
 }
 
 .menu {
+    z-index: 1;
     max-width: 180px;
     &__item{
         &:not(:last-child) {
@@ -114,6 +119,13 @@
         max-width: 100px;
         margin-bottom: 28px;
     }
+
+    &__link {   
+        transition: color .34s;
+        &:hover { 
+            color: $bg;
+        }
+    }
 }
 
 .social {
@@ -127,6 +139,15 @@
             gap: 10px;
         }
     }
+
+    &__link {
+        & svg path {
+            transition: fill .34s;
+        }
+        &:hover svg>path {
+            fill: $bg;
+        }
+    } 
     
 }
 
