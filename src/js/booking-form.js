@@ -2,10 +2,12 @@ const bookingForm = document.querySelector('.booking__form'),
     bookingInputFio = document.querySelector('.booking__input_fio'),
     bookingInputEmail = document.querySelector('.booking__input_email'),
     bookingInputTel = document.querySelector('.booking__input_tel'),
-    regexpFio = /^[а-яА-ЯёЁa-zA-Z ]+$/gi,
+    resultText = bookingForm.querySelector('.booking__result-text'),
+    resultSumm = bookingForm.querySelector('.booking__result-sum'),
+    regexpFio = /^[а-яА-ЯёЁa-zA-Z ]+$/,
     regexpEmail = /^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i,
     regexpTel = /^\d[\d\(\)\ -]{4,14}\d$/,
-    priseOnePerson = 45000, //в рублях
+    priseOnePerson = 45000, 
     priseBabySitter = 2000,
     prisePersonalMenu = 5000,
     prisePersonalGuide = 9000,
@@ -16,31 +18,36 @@ let dateForm = '',
     optionsForm = [];
 
 function valid(item, regExp) {
-
-    console.log(item.value);    
-    // console.log(regExp.test(item.value));    
     return regExp.test(item.value);
 };
 
-const formSpan = (value, className) => {    
-    const calcClassName = bookingForm.querySelector(`.${className}`);    
+const formSpan = (value, className, close = false) => {    
+    const calcClassName = bookingForm.querySelector(`.${className}`);
+    
+    if (close) {
+
+        if (className === 'booking__date') calcClassName.querySelector('.tour__span').textContent = 'Выбирите дату путешествия';
+        if (className === 'booking__count') calcClassName.querySelector('.tour__span').textContent = 'Укажите количество человек';
+        if (className === 'booking__options') calcClassName.querySelector('.tour__span').textContent = 'Выбирите нужные опции';
+        return;
+    }
 
     if (calcClassName.querySelector('.tour__span').textContent !== value && className === 'booking__count') {
-        countForm = value;
-        // instBtn(false);
+        countForm = value;        
         calcClassName.querySelector('.tour__span').textContent = countForm + ' человек';
     }
 
     if (calcClassName.querySelector('.tour__span').textContent !== value && className === 'booking__date') {
-        dateForm = value;
-        // instBtn(false);
+        dateForm = value;        
         calcClassName.querySelector('.tour__span').textContent = dateForm;
     }
 
     if (calcClassName.querySelector('.tour__span').textContent !== value && className === 'booking__options') {
-        // instBtn(false);
+        
         calcClassName.querySelector('.tour__span').textContent = value.join(', ');
     }    
+
+    
 };
 
 const toggle = (className) => {     
@@ -49,8 +56,8 @@ const toggle = (className) => {
 };
 
 const formSumm = () => {    
-    const resultText = bookingForm.querySelector('.booking__result-text'),
-        resultSumm = bookingForm.querySelector('.booking__result-sum');
+    // const resultText = bookingForm.querySelector('.booking__result-text'),
+    //     resultSumm = bookingForm.querySelector('.booking__result-sum');
 
     let summary = 0;
     summary = priseOnePerson * countForm;
@@ -77,15 +84,65 @@ const formSumm = () => {
         
 };
 
+function resetAll() {
+    bookingForm.reset();
+    dateForm = '',
+    countForm = 0,
+    optionsForm = [];
+    resultText.textContent = 'Выбирите дату путешествия';
+    resultSumm.textContent = 'Итог';
+    formSpan(0, 'booking__date', true);
+    formSpan(0, 'booking__count', true);
+    formSpan(0, 'booking__options', true);
+    bookingForm.querySelector('.booking__btn').setAttribute('disabled', 'disabled');
+}
+
 async function submit() {
     console.log('submit');
+    const p = document.createElement('p');
+        p.className = 'massege';
+        p.style.cssText = 'position: absolute; bottom: 50%; padding: 20px 20px; background-color: #FCB500; border: 2px solid #FCB500; border-radius: 10px; left: calc(50% - 160px);';
+        
     let response = await fetch('https://jsonplaceholder.typicode.com/posts',{
         method: 'POST',
         body: new FormData(bron)
     });
+    
+    if (response.ok) {
+        p.textContent = 'Ваше сообщение направленно ';
+        resetAll();
+    } else {
+        p.textContent = 'Что-то пошло не так, попробуйте позже';
+    }
+
+    bookingForm.querySelector('.booking__fieldset').append(p);
+
+    setTimeout(() =>{
+        bookingForm.querySelector('.massege').remove();
+    }, 3000);
 
     let result = await response.json();
     console.log(result);
+};
+
+const noValid = (item) => {
+    let p = document.createElement('p');
+        p.className = 'no-valid';
+        p.style.cssText = 'position: absolute;  bottom: 0; color: red';        
+        
+    if (item.classList.contains('booking__input_fio')) p.textContent = 'Введите правильно ФИО';
+    if (item.classList.contains('booking__input_email')) p.textContent = 'Введите правильно email';
+    if (item.classList.contains('booking__input_tel')) p.textContent = 'Введите правильно телефон';
+
+    console.log('item: ', item);
+    item.parentNode.style.border = '1px solid red';
+    item.parentNode.style.cssText = 'border: 1px solid red; position: relative;';
+    item.parentNode.append(p);
+
+    setTimeout(() =>{
+        item.parentNode.style.cssText = '';
+        item.parentNode.querySelector('.no-valid').remove();
+    }, 3000);
 };
 
 // слушатель     
@@ -153,20 +210,17 @@ bookingForm.addEventListener('click', (event) => {
 
     formSumm();
 
-    if (target.classList.contains('booking__btn')) {
-        console.log('booking__btn');
+    if (target.classList.contains('booking__btn')) {        
 
-        let fio = valid(bookingInputFio, regexpFio);
-        console.log('fio: ', fio);
-        let email = valid(bookingInputEmail, regexpEmail); //работает
-        console.log('email: ', email);
-        let tel = valid(bookingInputTel, regexpTel); //работает
-        console.log('tel: ', tel);
+        const fio = valid(bookingInputFio, regexpFio),        
+            email = valid(bookingInputEmail, regexpEmail),
+            tel = valid(bookingInputTel, regexpTel);
+                
+        if (!fio) noValid(bookingInputFio);
+        if (!email) noValid(bookingInputEmail);
+        if (!tel) noValid(bookingInputTel);
+        if (fio && email && tel) submit();
         
-        if (fio && email && tel) {
-            console.log('to submit');
-            submit();
-        }
 
     }
 });
