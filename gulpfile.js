@@ -153,7 +153,7 @@ export const scss = () =>
 		cascade: false,
 		grid: false
 	})))
-	.pipe(gulpif(!dev, gcmq()))
+	// .pipe(gulpif(!dev, gcmq())) влияет на результат разработки в build при переопределении тегов и их повторов лучше отключить
 	.pipe(gulpif(!dev, gulp.dest(path.dist.css)))
 	.pipe(gulpif(!dev, cleanCSS({
 		2: {

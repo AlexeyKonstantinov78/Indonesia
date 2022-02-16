@@ -5447,7 +5447,6 @@ menuBurgerNav.addEventListener('click', event => {
 // This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
 !function() {
 const instalClassSwiper = block => {
-  console.log(block);
   block.classList.add('swiper');
   block.querySelector('ul').className = 'swiper-wrapper about__swiper-wrapper';
   block.querySelectorAll('.about__item').forEach(item => item.className = 'swiper-slide');

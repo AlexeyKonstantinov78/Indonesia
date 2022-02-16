@@ -1,7 +1,6 @@
 
 const instalClassSwiper = (block) => {
-
-    console.log(block);
+    
     block.classList.add('swiper');
     block.querySelector('ul').className = 'swiper-wrapper about__swiper-wrapper';
     block.querySelectorAll('.about__item').forEach(item => item.className = 'swiper-slide');

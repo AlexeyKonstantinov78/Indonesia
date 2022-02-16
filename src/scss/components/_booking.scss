@@ -20,6 +20,9 @@
             margin-bottom: 30px;
             background-color: transparent;
             padding: 0;
+            @media (max-width: 1200px) {
+                padding: 0;
+            }
             @media (max-width: 1000px) {
                 flex-direction: row;
                 min-height: max-content;

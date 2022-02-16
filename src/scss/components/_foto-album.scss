@@ -1,4 +1,16 @@
 .foto-album {
+    padding-bottom: 570px;
+    
+    @media (max-width: 1200px) {
+        padding-bottom: 530px;
+    }
+
+    @media (max-width: 900px) {
+        padding-bottom: 390px;
+    }
+    @media (max-width: 480px) {
+        padding-bottom: 170px;
+    }
 
     &__name {
         margin-bottom: 60px;
@@ -25,7 +37,13 @@
     &__img {
         height: 100%;  
     }
-
+    &__slider {
+        // @media (max-width: 1440px) 
+            position: absolute;
+            width: 100%;
+            left: 0;
+        
+    }
 }
 
 .swiper2 {
