@@ -36,7 +36,17 @@
     <meta name="msapplication-TileColor" content="#020307">
     <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
-    <link rel="stylesheet" href="./css/index.min.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const createLink = url => {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = url;
+                document.head.append(link);
+            };
+            createLink('css/index.min.css');
+        });
+    </script>    
     <script defer src="./js/index.min.js"></script>
 </head>
 <body class="page">    
@@ -171,7 +181,7 @@
                     <picture class="travel__map">
                         <source srcset="./img/map.avif" type="image/avif">
                         <source srcset="./img/map.webp" type="image/webp">
-                        <img class="travel__map-img" src="./img/map.png" width="480" height="410" alt="Карта путешествия">    
+                        <img class="travel__map-img" src="./img/map.png" width="480" height="410" loading="lazy" alt="Карта путешествия">    
                     </picture>
                 </div>
 
@@ -298,7 +308,7 @@
                         <picture class="why__logo">
                             <source srcset="./img/why-logo1.avif" type="image/avif">
                             <source srcset="./img/why-logo1.webp" type="image/webp">
-                            <img class="why__logo-img" src="./img/why-logo1.png" width="40" height="40" alt="Логотип">
+                            <img class="why__logo-img" src="./img/why-logo1.png" width="40" height="40"  loading="lazy" alt="Логотип">
                         </picture>
                         <h4 class="why__item-name">Эксперты по Индонезии с 2006 года.</h4>
                         <p class="why__item-subcription">Уже 15 лет мы открываем для всех желающих великолепные и загадочные острова Индонезии.</p>
@@ -307,7 +317,7 @@
                         <picture class="why__logo">
                             <source srcset="./img/why-logo2.avif" type="image/avif">
                             <source srcset="./img/why-logo2.webp" type="image/webp">
-                            <img class="why__logo-img" src="./img/why-logo2.png" width="40" height="40" alt="Логотип">
+                            <img class="why__logo-img" src="./img/why-logo2.png" width="40" height="40"  loading="lazy" alt="Логотип">
                         </picture>
                         <h4 class="why__item-name">У нас цена = качество.</h4>
                         <p class="wh__item-_subcription">Ценность наших туров невозможно переоценить. Мы показываем то, о чем другие могут только мечтать.</p>
@@ -316,7 +326,7 @@
                         <picture class="why__logo">
                             <source srcset="./img/why-logo3.avif" type="image/avif">
                             <source srcset="./img/why-logo3.webp" type="image/webp">
-                            <img class="why__logo-img" src="./img/why-logo3.png" width="40" height="40" alt="Логотип">
+                            <img class="why__logo-img" src="./img/why-logo3.png" width="40" height="40"  loading="lazy" alt="Логотип">
                         </picture>
                         <h4 class="why__item-name">Поддержка 24/7.</h4>
                         <p class="why__item-subcription">Мы не бросаем наших туристов одних в диких местах, мы помогаем справляться со всеми сложностями, которые могут у вас возникнуть.</p>
@@ -325,7 +335,7 @@
                         <picture class="why__logo">
                             <source srcset="./img/why-logo4.avif" type="image/avif">
                             <source srcset="./img/why-logo4.webp" type="image/webp">
-                            <img class="why__logo-img" src="./img/why-logo4.png" width="40" height="40" alt="Логотип">
+                            <img class="why__logo-img" src="./img/why-logo4.png" width="40" height="40"  loading="lazy" alt="Логотип">
                         </picture>
                         <h4 class="why__item-name">Медицинская помощь.</h4>
                         <p class="why__item-subcription">Вместе с нами в путешествие отправляются специалисты по оказанию экстренной медицинской помощи. </p>
@@ -334,7 +344,7 @@
                         <picture class="why__logo">
                             <source srcset="./img/why-logo5.avif" type="image/avif">
                             <source srcset="./img/why-logo5.webp" type="image/webp">
-                            <img class="why__logo-img" src="./img/why-logo5.png" width="40" height="40" alt="Логотип">
+                            <img class="why__logo-img" src="./img/why-logo5.png" width="40" height="40"  loading="lazy" alt="Логотип">
                         </picture>
                         <h4 class="why__item-name">Помощь с детьми.</h4>
                         <p class="why__item-subcription">Мы предоставим вам профессиональную няню, которая присмотрит за вашим чадом в часы вашего отсутствия.</p>
@@ -343,7 +353,7 @@
                         <picture class="why__logo">
                             <source srcset="./img/why-logo6.avif" type="image/avif">
                             <source srcset="./img/why-logo6.webp" type="image/webp">
-                            <img class="why__logo-img" src="./img/why-logo6.png" width="40" height="40" alt="Логотип">
+                            <img class="why__logo-img" src="./img/why-logo6.png" width="40" height="40"  loading="lazy" alt="Логотип">
                         </picture>                        
                         <h4 class="why__item-name">Национальная кухня.</h4>
                         <p class="why__item-subcription">Вы узнаете на вкус чем отличается тумпенг от наси горенга и попробуете настоящий индонезийский суп бунтут.</p>
@@ -365,42 +375,42 @@
                                 <picture class="foto-album__img">
                                     <source srcset="./img/slider1.avif" type="image/avif">
                                     <source srcset="./img/slider1.webp" type="image/webp">
-                                    <img class="foto-album__img-img" src="./img/slider1.png" alt="Логотип">
+                                    <img class="foto-album__img-img" src="./img/slider1.png" width="1110" height="500"  loading="lazy" alt="Фотоальбом">
                                 </picture>
                             </li>
                             <li class="foto-album__item swiper-slide">
                                 <picture class="foto-album__img">
                                     <source srcset="./img/slider2.avif" type="image/avif">
                                     <source srcset="./img/slider2.webp" type="image/webp">
-                                    <img class="foto-album__img-img" src="./img/slider2.png" alt="Логотип">
+                                    <img class="foto-album__img-img" src="./img/slider2.png" width="1110" height="500"  loading="lazy" alt="Фотоальбом">
                                 </picture>
                             </li>
                             <li class="foto-album__item swiper-slide">
                                 <picture class="foto-album__img">
                                     <source srcset="./img/slider3.avif" type="image/avif">
                                     <source srcset="./img/slider3.webp" type="image/webp">
-                                    <img class="foto-album__img-img" src="./img/slider3.png" alt="Логотип">
+                                    <img class="foto-album__img-img" src="./img/slider3.png" width="1110" height="500"  loading="lazy" alt="Фотоальбом">
                                 </picture>
                             </li>
                             <li class="foto-album__item swiper-slide">
                                 <picture class="foto-album__img">
                                     <source srcset="./img/slider4.avif" type="image/avif">
                                     <source srcset="./img/slider4.webp" type="image/webp">
-                                    <img class="foto-album__img-img" src="./img/slider4.png" alt="Логотип">
+                                    <img class="foto-album__img-img" src="./img/slider4.png" width="1110" height="500"  loading="lazy" alt="Фотоальбом">
                                 </picture>
                             </li>
                             <li class="foto-album__item swiper-slide">
                                 <picture class="foto-album__img">
                                     <source srcset="./img/slider5.avif" type="image/avif">
                                     <source srcset="./img/slider5.webp" type="image/webp">
-                                    <img class="foto-album__img-img" src="./img/slider5.png" alt="Логотип">
+                                    <img class="foto-album__img-img" src="./img/slider5.png" width="1110" height="500"  loading="lazy" alt="Фотоальбом">
                                 </picture>
                             </li>
                             <li class="foto-album__item swiper-slide">
                                 <picture class="foto-album__img">
                                     <source srcset="./img/slider6.avif" type="image/avif">
                                     <source srcset="./img/slider6.webp" type="image/webp">
-                                    <img class="foto-album__img-img" src="./img/slider6.png" alt="Логотип">
+                                    <img class="foto-album__img-img" src="./img/slider6.png" width="1110" height="500"  loading="lazy" alt="Фотоальбом">
                                 </picture>
                             </li>
                         </ul>

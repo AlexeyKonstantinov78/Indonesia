@@ -2,14 +2,16 @@ const characteristicsListElem = document.querySelector('.travel__list');
 const characteristicsItemElems = document.querySelectorAll('.travel__item');
 
 characteristicsItemElems.forEach(elem => {
-  if (elem.children[1].classList.contains('active')) {
-    elem.children[1].style.height = elem.children[1].scrollHeight + 'px';
-  }
-})
+  setTimeout(() => {
+    if (elem.children[1].classList.contains('active')) {      
+      elem.children[1].style.height = elem.children[1].scrollHeight + 'px';
+    }
+  }, 500);  
+});
 
 const open = (button, dropDown) => {
   closeAllDrops(button, dropDown);
-  
+  console.log(dropDown.scrollHeight);
   dropDown.style.height = dropDown.scrollHeight + 'px';
 //   dropDown.style.height = 'min-content';
   dropDown.parentNode.classList.add('travel__item_active');

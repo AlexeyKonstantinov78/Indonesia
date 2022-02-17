@@ -2702,6 +2702,9 @@ button.swiper-pagination-bullet {
 .foto-album__img {
   height: 100%;
 }
+.foto-album__img-img {
+  width: 100%;
+}
 .foto-album__slider {
   position: absolute;
   width: 100%;
