@@ -31,7 +31,7 @@ $font-color: #303030;
 
 @mixin bg-avif-webp($url, $type) {
     background: {
-        image: url("#{$url}.#{$type}");
+        image: url("#{$url}.avif");
         size: cover;
         position: center;
         repeat: no-repeat;        
