@@ -580,12 +580,12 @@ section {
 
 .header {
   position: relative;
-  background-image: url("./../img/bg-header-section.avif");
+  background-image: url("/img/bg-header-section.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: -webkit-image-set(url("./../img/bg-header-section.avif") 1x, url("./../img/bg-header-section.webp") 1x, url("./../img/bg-header-section.jpg") 1x);
-  background-image: image-set(url("./../img/bg-header-section.avif") 1x, url("./../img/bg-header-section.webp") 1x, url("./../img/bg-header-section.jpg") 1x);
+  background-image: -webkit-image-set(url("/img/bg-header-section.avif") 1x, url("/img/bg-header-section.webp") 1x);
+  background-image: image-set(url("/img/bg-header-section.avif") 1x, url("/img/bg-header-section.webp") 1x);
   background-position: top;
 }
 .header__container:before {
@@ -1047,8 +1047,8 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: -webkit-image-set(url("./../img/about-bg1.avif") 1x, url("./../img/about-bg1.webp") 1x, url("./../img/about-bg1.jpg") 1x);
-  background-image: image-set(url("./../img/about-bg1.avif") 1x, url("./../img/about-bg1.webp") 1x, url("./../img/about-bg1.jpg") 1x);
+  background-image: -webkit-image-set(url("./../img/about-bg1.avif") 1x, url("./../img/about-bg1.webp") 1x);
+  background-image: image-set(url("./../img/about-bg1.avif") 1x, url("./../img/about-bg1.webp") 1x);
   width: 380px;
   height: 700px;
   display: inline-block;
@@ -1073,8 +1073,8 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -webkit-image-set(url("./../img/about-bg1.avif") 1x, url("./../img/about-bg1.webp") 1x, url("./../img/about-bg1.png") 1x);
-    background-image: image-set(url("./../img/about-bg1.avif") 1x, url("./../img/about-bg1.webp") 1x, url("./../img/about-bg1.png") 1x);
+    background-image: -webkit-image-set(url("./../img/about-bg1.avif") 1x, url("./../img/about-bg1.webp") 1x);
+    background-image: image-set(url("./../img/about-bg1.avif") 1x, url("./../img/about-bg1.webp") 1x);
   }
 }
 .about__bg2 {
@@ -1082,8 +1082,8 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: -webkit-image-set(url("./../img/about-bg2.avif") 1x, url("./../img/about-bg2.webp") 1x, url("./../img/about-bg2.jpg") 1x);
-  background-image: image-set(url("./../img/about-bg2.avif") 1x, url("./../img/about-bg2.webp") 1x, url("./../img/about-bg2.jpg") 1x);
+  background-image: -webkit-image-set(url("./../img/about-bg2.avif") 1x, url("./../img/about-bg2.webp") 1x);
+  background-image: image-set(url("./../img/about-bg2.avif") 1x, url("./../img/about-bg2.webp") 1x);
   width: 480px;
   height: 313px;
   display: inline-block;
@@ -1110,8 +1110,8 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -webkit-image-set(url("./../img/about-bg2.avif") 1x, url("./../img/about-bg2.webp") 1x, url("./../img/about-bg2.png") 1x);
-    background-image: image-set(url("./../img/about-bg2.avif") 1x, url("./../img/about-bg2.webp") 1x, url("./../img/about-bg2.png") 1x);
+    background-image: -webkit-image-set(url("./../img/about-bg2.avif") 1x, url("./../img/about-bg2.webp") 1x);
+    background-image: image-set(url("./../img/about-bg2.avif") 1x, url("./../img/about-bg2.webp") 1x);
   }
 }
 .about__bg3 {
@@ -1119,8 +1119,8 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: -webkit-image-set(url("./../img/about-bg3.avif") 1x, url("./../img/about-bg3.webp") 1x, url("./../img/about-bg3.jpg") 1x);
-  background-image: image-set(url("./../img/about-bg3.avif") 1x, url("./../img/about-bg3.webp") 1x, url("./../img/about-bg3.jpg") 1x);
+  background-image: -webkit-image-set(url("./../img/about-bg3.avif") 1x, url("./../img/about-bg3.webp") 1x);
+  background-image: image-set(url("./../img/about-bg3.avif") 1x, url("./../img/about-bg3.webp") 1x);
   width: 280px;
   height: 377px;
   position: absolute;
@@ -1149,8 +1149,8 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -webkit-image-set(url("./../img/about-bg3.avif") 1x, url("./../img/about-bg3.webp") 1x, url("./../img/about-bg3.png") 1x);
-    background-image: image-set(url("./../img/about-bg3.avif") 1x, url("./../img/about-bg3.webp") 1x, url("./../img/about-bg3.png") 1x);
+    background-image: -webkit-image-set(url("./../img/about-bg3.avif") 1x, url("./../img/about-bg3.webp") 1x);
+    background-image: image-set(url("./../img/about-bg3.avif") 1x, url("./../img/about-bg3.webp") 1x);
   }
 }
 .about__bg4 {
@@ -1158,8 +1158,8 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: -webkit-image-set(url("./../img/about-bg4.avif") 1x, url("./../img/about-bg4.webp") 1x, url("./../img/about-bg4.jpg") 1x);
-  background-image: image-set(url("./../img/about-bg4.avif") 1x, url("./../img/about-bg4.webp") 1x, url("./../img/about-bg4.jpg") 1x);
+  background-image: -webkit-image-set(url("./../img/about-bg4.avif") 1x, url("./../img/about-bg4.webp") 1x);
+  background-image: image-set(url("./../img/about-bg4.avif") 1x, url("./../img/about-bg4.webp") 1x);
   width: 380px;
   height: 507px;
 }
@@ -1184,8 +1184,8 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -webkit-image-set(url("./../img/about-bg4.avif") 1x, url("./../img/about-bg4.webp") 1x, url("./../img/about-bg4.png") 1x);
-    background-image: image-set(url("./../img/about-bg4.avif") 1x, url("./../img/about-bg4.webp") 1x, url("./../img/about-bg4.png") 1x);
+    background-image: -webkit-image-set(url("./../img/about-bg4.avif") 1x, url("./../img/about-bg4.webp") 1x);
+    background-image: image-set(url("./../img/about-bg4.avif") 1x, url("./../img/about-bg4.webp") 1x);
   }
 }
 .about__bg5 {
@@ -1193,8 +1193,8 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: -webkit-image-set(url("./../img/about-bg5.avif") 1x, url("./../img/about-bg5.webp") 1x, url("./../img/about-bg5.jpg") 1x);
-  background-image: image-set(url("./../img/about-bg5.avif") 1x, url("./../img/about-bg5.webp") 1x, url("./../img/about-bg5.jpg") 1x);
+  background-image: -webkit-image-set(url("./../img/about-bg5.avif") 1x, url("./../img/about-bg5.webp") 1x);
+  background-image: image-set(url("./../img/about-bg5.avif") 1x, url("./../img/about-bg5.webp") 1x);
   width: 280px;
   height: 264px;
   display: inline-block;
@@ -1219,8 +1219,8 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -webkit-image-set(url("./../img/about-bg5.avif") 1x, url("./../img/about-bg5.webp") 1x, url("./../img/about-bg5.png") 1x);
-    background-image: image-set(url("./../img/about-bg5.avif") 1x, url("./../img/about-bg5.webp") 1x, url("./../img/about-bg5.png") 1x);
+    background-image: -webkit-image-set(url("./../img/about-bg5.avif") 1x, url("./../img/about-bg5.webp") 1x);
+    background-image: image-set(url("./../img/about-bg5.avif") 1x, url("./../img/about-bg5.webp") 1x);
   }
 }
 .about__swiper-wrapper {
@@ -2215,8 +2215,8 @@ button.swiper-pagination-bullet {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: -webkit-image-set(url("./../img/bg-tour.avif") 1x, url("./../img/bg-tour.webp") 1x, url("./../img/bg-tour.png") 1x);
-  background-image: image-set(url("./../img/bg-tour.avif") 1x, url("./../img/bg-tour.webp") 1x, url("./../img/bg-tour.png") 1x);
+  background-image: -webkit-image-set(url("./../img/bg-tour.avif") 1x, url("./../img/bg-tour.webp") 1x);
+  background-image: image-set(url("./../img/bg-tour.avif") 1x, url("./../img/bg-tour.webp") 1x);
   min-height: 500px;
   padding-bottom: 0;
   position: relative;
@@ -3290,8 +3290,8 @@ button.swiper-pagination-bullet {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: -webkit-image-set(url("./../img/bg-footer.avif") 1x, url("./../img/bg-footer.webp") 1x, url("./../img/bg-footer.png") 1x);
-  background-image: image-set(url("./../img/bg-footer.avif") 1x, url("./../img/bg-footer.webp") 1x, url("./../img/bg-footer.png") 1x);
+  background-image: -webkit-image-set(url("./../img/bg-footer.avif") 1x, url("./../img/bg-footer.webp") 1x);
+  background-image: image-set(url("./../img/bg-footer.avif") 1x, url("./../img/bg-footer.webp") 1x);
   color: #FFFFFF;
   font-family: Nunito;
   font-weight: 300;
