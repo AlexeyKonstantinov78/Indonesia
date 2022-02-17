@@ -9,15 +9,16 @@ characteristicsItemElems.forEach(elem => {
 
 const open = (button, dropDown) => {
   closeAllDrops(button, dropDown);
-  console.dir(dropDown);
-  console.log(dropDown.scrollHeight);
+  
   dropDown.style.height = dropDown.scrollHeight + 'px';
 //   dropDown.style.height = 'min-content';
+  dropDown.parentNode.classList.add('travel__item_active');
   button.classList.add('active');
   dropDown.classList.add('active');
 };
 
 const close = (button, dropDown) => {
+  dropDown.parentNode.classList.remove('travel__item_active');
   button.classList.remove('active');
   dropDown.classList.remove('active');
   dropDown.style.height = '';

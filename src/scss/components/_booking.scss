@@ -123,6 +123,11 @@
         }
     }
     
+    &__date,
+    &__count,
+    &__options {
+        cursor: pointer;
+    }
     
     &__daw {
         &:before {

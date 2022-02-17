@@ -5152,13 +5152,17 @@ function resetAll() {
 }
 
 async function submit() {
-  console.log('submit');
   const p = document.createElement('p');
   p.className = 'massege';
   p.style.cssText = 'position: absolute; bottom: 50%; padding: 20px 20px; background-color: #FCB500; border: 2px solid #FCB500; border-radius: 10px; left: calc(50% - 160px);';
+  const formData = Object.fromEntries(new FormData(bron));
   let response = await fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'POST',
-    body: new FormData(bron)
+    headers: {
+      'Content-Type': 'application/json' // отправляемые данные 
+
+    },
+    body: JSON.stringify(formData)
   });
 
   if (response.ok) {
@@ -5185,7 +5189,6 @@ const noValid = item => {
   if (item.classList.contains('booking__input_fio')) p.textContent = 'Введите правильно ФИО';
   if (item.classList.contains('booking__input_email')) p.textContent = 'Введите правильно email';
   if (item.classList.contains('booking__input_tel')) p.textContent = 'Введите правильно телефон';
-  console.log('item: ', item);
   item.parentNode.style.border = '1px solid red';
   item.parentNode.style.cssText = 'border: 1px solid red; position: relative;';
   item.parentNode.append(p);
@@ -5197,8 +5200,7 @@ const noValid = item => {
 
 
 bookingForm.addEventListener('click', event => {
-  let target = event.target; // console.log(target);  
-  // делегирование нажатие стрелки и btn  
+  let target = event.target; // делегирование нажатие стрелки и btn  
 
   if (target.parentNode.classList.contains('booking__date')) {
     toggle('calc__date-fieldset');
@@ -5537,15 +5539,15 @@ characteristicsItemElems.forEach(elem => {
 
 const open = (button, dropDown) => {
   closeAllDrops(button, dropDown);
-  console.dir(dropDown);
-  console.log(dropDown.scrollHeight);
   dropDown.style.height = dropDown.scrollHeight + 'px'; //   dropDown.style.height = 'min-content';
 
+  dropDown.parentNode.classList.add('travel__item_active');
   button.classList.add('active');
   dropDown.classList.add('active');
 };
 
 const close = (button, dropDown) => {
+  dropDown.parentNode.classList.remove('travel__item_active');
   button.classList.remove('active');
   dropDown.classList.remove('active');
   dropDown.style.height = '';

@@ -2067,9 +2067,24 @@ button.swiper-pagination-bullet {
   }
 }
 .travel__list {
+  position: relative;
   max-width: 566px;
-  border-left: 2px solid #FCB500;
   margin-left: 14px;
+}
+.travel__list::before {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  content: "";
+  display: block;
+  width: 2px;
+  background-color: #FCB500;
+  height: calc(100% - 57px);
+}
+@media (max-width: 1000px) {
+  .travel__list::before {
+    height: calc(100% - 65px);
+  }
 }
 @media (max-width: 1200px) {
   .travel__list {
@@ -2085,6 +2100,9 @@ button.swiper-pagination-bullet {
   .travel__list {
     margin-left: 7px;
   }
+}
+.travel__item_active:last-child {
+  border-left: 2px solid #FCB500;
 }
 .travel__title {
   position: relative;
@@ -2109,7 +2127,7 @@ button.swiper-pagination-bullet {
 .travel__title:before {
   position: absolute;
   top: 7px;
-  left: -10px;
+  left: -8px;
   content: "";
   display: block;
   width: 18px;
@@ -2123,11 +2141,7 @@ button.swiper-pagination-bullet {
   .travel__title:before {
     width: 11px;
     height: 11px;
-  }
-}
-@media (max-width: 680px) {
-  .travel__title:before {
-    left: -7px;
+    left: -5px;
   }
 }
 .travel__title.active:before {
@@ -2140,11 +2154,11 @@ button.swiper-pagination-bullet {
   .travel__title.active:before {
     width: 16px;
     height: 16px;
+    left: -7px;
   }
 }
 @media (max-width: 680px) {
   .travel__title.active:before {
-    left: -9px;
     top: 7px;
   }
 }
@@ -2681,6 +2695,7 @@ button.swiper-pagination-bullet {
 }
 @media (max-width: 680px) {
   .foto-album__subscription {
+    font-size: 16px;
     margin-bottom: 25px;
   }
 }
@@ -3175,6 +3190,9 @@ button.swiper-pagination-bullet {
   .booking__item_email {
     margin-bottom: 15px;
   }
+}
+.booking__date, .booking__count, .booking__options {
+  cursor: pointer;
 }
 .booking__daw:before {
   border-bottom: 2px solid #303030;
