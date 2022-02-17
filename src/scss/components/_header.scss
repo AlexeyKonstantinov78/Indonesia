@@ -1,6 +1,6 @@
 .header {
     position: relative;     
-    @include bg-avif-webp("/img/bg-header-section", jpg);
+    @include bg-avif-webp("./../img/bg-header-section", jpg);
     background-position: top;
 
     &__container {
